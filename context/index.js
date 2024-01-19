@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React, { createContext, useState } from "react";
 
-export const Context = createContext({
+export const AuthContext = createContext({
   userName: "",
   secret: "",
   setUserName: () => {},
@@ -19,5 +19,7 @@ export const ContextProvider = ({ children }) => {
     setSecret,
   };
 
-  return <Context.Provider value={ctxValues}>{children}</Context.Provider>;
+  return (
+    <AuthContext.Provider value={ctxValues}>{children}</AuthContext.Provider>
+  );
 };
