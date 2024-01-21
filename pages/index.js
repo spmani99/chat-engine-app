@@ -14,7 +14,7 @@ const Auth = () => {
   function onSubmit(e) {
     e.preventDefault();
 
-    if (userName.length === 1 || secret.length === 1) return;
+    if (userName.length === 0 || secret.length === 0) return;
 
     axios
       .put(
